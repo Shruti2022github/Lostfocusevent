@@ -1,0 +1,27 @@
+<html>
+<script>
+function set_focus()
+{
+document.form1.t1.focus()
+}
+function addnum()
+{
+num1=eval(document.form1.t1.value);
+num2=eval(document.form1.t2.value);
+sum=num1+num2;
+document.form1.t3.value=sum;
+}
+</script>
+<body onload="set_focus()">
+<form name=form1>
+Enter 1st number:-<input type=text name=t1 value="">
+<br><br><br>
+Enter 2nd number:-<input type=text name=t2 value=""onblur="addnum()">
+<br><br><br>
+<input type=button name=b1 value="Add number"onclick="addnum()">
+<br><br>
+Result:-<input type=text name=t3 value="">
+<br><br>
+</form>
+</body>
+</html>
